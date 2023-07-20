@@ -1,0 +1,25 @@
+name: Run Cypress Tests
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Install Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '18.16.0'
+
+    - name: Install Dependencies
+      run: npm install cypress --save-dv
+
+    - name: Run Cypress Tests
+      run: npx cypress run
