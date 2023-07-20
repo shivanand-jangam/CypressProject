@@ -1,6 +1,5 @@
-import { loginPage } from '../pages/common/LoginPage.js';
-import { homePage } from '../pages/common/HomePage.js';
-
+import loginPage from '../pages/common/LoginPage.js'
+import homePage from '../pages/common/HomePage.js'
 
 describe('This is My Test Suite', function(){
   let productInfoArray;
@@ -13,8 +12,8 @@ describe('This is My Test Suite', function(){
 
   beforeEach(() => {
     cy.visit(Cypress.env('baseUrl'));
-    getUsernameInput().type(Cypress.env('username'));
-    getPasswordInput().type(Cypress.env('password'));
+    loginPage.getUsernameInput().type(Cypress.env('username'));
+    loginPage.getPasswordInput().type(Cypress.env('password'));
     loginPage.getSubmitButton().click();
     cy.title().should('eq', 'Swag Labs');
     })

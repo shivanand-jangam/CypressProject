@@ -1,13 +1,14 @@
+export default class LoginPage {
 
-  export function getUsernameInput() {
+    static getUsernameInput() {
         return cy.get('#user-name');
       }
     
-      export function   getPasswordInput() {
+      static getPasswordInput() {
         return cy.get('input[name="password"]');
       }
     
-      export function  getSubmitButton() {
+      static getSubmitButton() {
         return cy.get('.submit-button');
       }
-    
+    }
