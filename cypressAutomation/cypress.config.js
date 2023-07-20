@@ -11,8 +11,7 @@ module.exports = defineConfig({
   },
 
   "env": {
-     "DevbaseUrl": "https://www.saucedemo.com/",
-     "qabaseUrl": "https://www.saucedemo.com/",
+     "baseUrl": "https://www.saucedemo.com/",
      "browser": "chrome",
      "username":"standard_user",
      "password":"secret_sauce"
